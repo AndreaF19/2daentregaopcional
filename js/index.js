@@ -44,12 +44,20 @@ function BorrarDatos(){
     console.log('Family Name: ' + profile.getFamilyName());
     console.log("Image URL: " + profile.getImageUrl());
     console.log("Email: " + profile.getEmail());
-    window.location.replace("mainpage.html");// Redirige a la pagina principal.
+    
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
+    window.location.replace("mainpage.html");// Redirige a la pagina principal.
    
   }
+  function init() {
+    gapi.load('auth2', function() {
+      gapi.auth2.init()
+  
+    });
+  }
+
 
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -59,10 +67,4 @@ function BorrarDatos(){
   }); 
    
   } 
-  function onLoad() {
-    gapi.load('auth2', function() {
-      gapi.auth2.init()
-  
-    });
-  }
 
