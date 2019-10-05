@@ -50,8 +50,9 @@ function BorrarDatos(){
   {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {   
+   window.location = "https://mail.google.com/mail/u/0/?logout&hl=en";
     console.log('User signed out.');   
-    window.location = "https://mail.google.com/mail/u/0/?logout&hl=en";
+    
   }); 
    
   } 
