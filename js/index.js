@@ -59,9 +59,4 @@ function BorrarDatos(){
     });
   }
 
-  function myFunction() {
-    gapi.auth2.getAuthInstance().signOut().then(function () {
-      console.log('User signed out.');
-      location.reload();
-    });
-}
+ 
