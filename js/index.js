@@ -43,9 +43,13 @@ function BorrarDatos(){
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     var id_token = googleUser.getAuthResponse().id_token;
     console.log(id_token);
-    window.location.replace("mainpage.html");// Redirige a la pagina principal.
+  
 
   }
+
+  window.location.replace("mainpage.html");// Redirige a la pagina principal.
+
+  
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {   
