@@ -47,7 +47,7 @@ function BorrarDatos(){
 
   }
 
- // window.location.replace("mainpage.html");// Redirige a la pagina principal.
+  window.location.replace("mainpage.html");// Redirige a la pagina principal.
 
 
   function signOut() {
