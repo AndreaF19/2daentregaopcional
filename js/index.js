@@ -10,7 +10,7 @@ function UsuarioAutenticacion(){ //autentica al usuario
    var nombre = document.getElementById("user").value;
    var contraseña = document.getElementById("pwd").value;
 if (nombre=="Andrea" && contraseña=="1234"){
-  
+  guardarDatos()
 window.location.href = "mainpage.html";// Redirige a la pagina principal.
 
 }
