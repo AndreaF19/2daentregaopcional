@@ -56,8 +56,8 @@ function BorrarDatos(){
     });
   }
 
- function onLoad() {
-    api.load('auth2', function() {
-     gapi.auth2.init();
+  function onLoad() {
+    gapi.load('auth2', function() {
+      gapi.auth2.init();
     });
- }
+  }
