@@ -46,10 +46,7 @@ function BorrarDatos(){
     window.location.replace("mainpage.html");// Redirige a la pagina principal.
 
   }
-  function onLoad() {
-    gapi.load('auth2', function() {
-      gapi.auth2.init();
-    });
+ 
 
     function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
@@ -60,4 +57,8 @@ function BorrarDatos(){
         });
       }
   
-    }
+      function onLoad() {
+        gapi.load('auth2', function() {
+          gapi.auth2.init();
+        });
+      }
