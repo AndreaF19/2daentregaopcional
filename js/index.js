@@ -48,7 +48,7 @@ function BorrarDatos(){
     // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
-    window.location.replace("mainpage.html");// Redirige a la pagina principal.
+    window.location.href="mainpage.html";// Redirige a la pagina principal.
    
   }
   function init() {
@@ -56,7 +56,7 @@ function BorrarDatos(){
         gapi.auth2.init({ client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' })
      });
    }
-   const auth2;
+   var auth2;
   var gapi;
   gapi.auth2.init().then(()=>{
   singOut = function () {
