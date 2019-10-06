@@ -51,7 +51,6 @@ function BorrarDatos(){
     window.location.href="mainpage.html";// Redirige a la pagina principal.
    
   }
-  gapi.load("client:auth2", initAuth);
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
