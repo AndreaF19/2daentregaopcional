@@ -57,9 +57,8 @@ function BorrarDatos(){
   
     });
   }
-  var revokeAllScopes = function() {
-    auth2.disconnect();
-  }
+  
+ 
 
   function signOut() {
    // var auth2 = gapi.auth2.getAuthInstance();
