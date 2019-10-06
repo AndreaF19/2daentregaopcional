@@ -51,19 +51,16 @@ function BorrarDatos(){
     window.location.href="mainpage.html";// Redirige a la pagina principal.
    
   }
-  
-  gapi.load('auth2', initSigninV2);
 
-function initSigninV2() {
-    gapi.auth2.init({
-        client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com'
-    }).then(function (_authInstance) {
-        // now auth2 is fully initialized
+  
+  function init() {
+    gapi.load('auth2', function() {
+        gapi.auth2.init({ client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' })
+     });
+   }
+   function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
     });
-}
-function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    console.log('User signed out.');
-  });
-}
+  }
