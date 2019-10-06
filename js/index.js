@@ -59,19 +59,19 @@ function BorrarDatos(){
   
     //});
  // }
- 
-  function signOut() {
-   var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      auth2.disconnect();
 
-     console.log('User signed out.');    
-});
-}
+  //function signOut() {
+   //var auth2 = gapi.auth2.getAuthInstance();
+    //auth2.signOut().then(function () {
+     // auth2.disconnect();
+
+    // console.log('User signed out.');    
+//});
+//}
     
 
- window.Onload = function(){ 
-   gapi.auth2.init({
-    client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' 
-});
- } 
+// window.Onload = function(){ 
+  // gapi.auth2.init({
+  //  client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' 
+//});
+ //} 
