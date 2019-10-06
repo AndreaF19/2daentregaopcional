@@ -13,6 +13,9 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+        <meta name="google-signin-client_id" content="485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body onload= "mostrarNombreUsuario()">
       <nav class="navbar navbar-dark navbar-expand-lg site-header   sticky-top py-1 bg-dark">
@@ -40,9 +43,8 @@
                        </button>
                             <div class="dropdown-menu" aria-describedby="dropdownMenuButton">
                               <a class="dropdown-item" href="cart.html">Mi carrito</a>
-                              <a class="dropdown-item" href="index.html" onclick="BorrarDatos(); signOut();">Cerrar sesion</a>         
-                              <a href="index.html#" onclick="signOut();">Sign out</a>
-                            </div>
+                              <a class="dropdown-item" href="index.html" onclick="singOut(); BorrarDatos();">Cerrar sesion</a>          
+                    </div>
                         
                         </div>
                   </ul>
@@ -133,23 +135,6 @@
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
-    <script>
-        function signOut() {
-          var auth2 = gapi.auth2.getAuthInstance();
-          auth2.signOut().then(function () {
-            console.log('User signed out.');
-          });
-        }
-    
-        function onLoad() {
-          gapi.load('auth2', function() {
-            gapi.auth2.init();
-          });
-        }
-      </script>
-     
-      <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
-
-
+    </head>
   </body>
 </html>
