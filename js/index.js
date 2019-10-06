@@ -66,7 +66,7 @@ function BorrarDatos(){
     //auth2.signOut().then(function () {
     // console.log('User signed out.');
     
-      location.href = 'https://accounts.google.com/Logout?&continue=https://andreaf19.github.io/2daentregaopcional/';
+      location.href = 'https://accounts.google.com/Logout?&continue=https://andreaf19.github.io/2daentregaopcional/index.html#';
      
 //});
 //auth2.disconnect();
