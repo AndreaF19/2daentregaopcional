@@ -56,6 +56,7 @@ function BorrarDatos(){
         gapi.auth2.init({ client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' })
      });
    }
+   const OAuth2Client = google.google.auth.OAuth2;
   var gapi;
   gapi.auth2.init().then(()=>{
   singOut = function () {
