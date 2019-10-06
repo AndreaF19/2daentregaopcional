@@ -52,15 +52,17 @@ function BorrarDatos(){
    
   }
   
-
-  function signOut() {
+  gapi.auth2.init().then(()=>{
+  singOut = function () {
    var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       auth2.disconnect();
+   
+     console.log('User signed out.');  
 
-     console.log('User signed out.');    
 });
 }
+})
 function init() {
  gapi.load('auth2', function() {
      gapi.auth2.init({ client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' })
