@@ -51,6 +51,11 @@ function BorrarDatos(){
     window.location.replace("mainpage.html");// Redirige a la pagina principal.
    
   }
+  function init() {
+    gapi.load('auth2', function() {
+        gapi.auth2.init({ client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' })
+     });
+   }
   var gapi;
   gapi.auth2.init().then(()=>{
   singOut = function () {
@@ -63,8 +68,4 @@ function BorrarDatos(){
 });
 }
 })
-function init() {
- gapi.load('auth2', function() {
-     gapi.auth2.init({ client_id: '485493375484-pi1k1ntjhmlcem9kcts91liah5cpp4tf.apps.googleusercontent.com' })
-  });
-}
+
