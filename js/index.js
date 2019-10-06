@@ -54,20 +54,16 @@ function BorrarDatos(){
   function init() {
     gapi.load('auth2', function() {
       gapi.auth2.init()
+      
   
     });
   }
   function signOut() {
-   // var auth2 = gapi.auth2.getAuthInstance();
-    //auth2.signOut().then(function () {
-    // console.log('User signed out.');
-    
-      location.href = 'https://accounts.google.com/Logout?&continue=https://andreaf19.github.io/2daentregaopcional/index.html#';
-     
-//});
-//auth2.disconnect();
-
-  }
+   var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+     console.log('User signed out.');    
+});
+}
     
 
    
