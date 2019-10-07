@@ -50,10 +50,9 @@ function BorrarDatos(){
     console.log("ID Token: " + id_token);
     window.location.href="mainpage.html";// Redirige a la pagina principal.
   }
-   function disconnect(){
-    location.href="https://www.google.com/accounts/Logout";
+   function getAuthInstance(){
    }
-
+   
   
    function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
@@ -61,7 +60,7 @@ function BorrarDatos(){
       console.log('User signed out.');
       auth2.disconnect();
     });    
-    auth2.disconnect();
+
   }
   function onLoad() {
     gapi.load('auth2', function() {
