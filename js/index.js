@@ -36,6 +36,7 @@ function BorrarDatos(){
   //AUTENTICACION CON GOOGLE
 
   function onSignIn(googleUser) {
+    const googleUser = gapi.auth2.getAuthInstance().currentUser.get();
     // Useful data for your client-side scripts:
     var profile = googleUser.getBasicProfile();
     console.log("ID: " + profile.getId()); // Don't send this directly to your server!
