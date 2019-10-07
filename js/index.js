@@ -1,35 +1,40 @@
 
-function guardarDatos() { //guarda el nombre y la contraseña
+function guardarDatos() {
   localStorage.nombre = document.getElementById("user").value;
-localStorage.contraseña = document.getElementById("pwd").value;
+  localStorage.contraseña = document.getElementById("pwd").value;
 }
 
 
 
-function UsuarioAutenticacion(){ //autentica al usuario
-   var nombre = document.getElementById("user").value;
-   var contraseña = document.getElementById("pwd").value;
-if (nombre=="Andrea" && contraseña=="1234"){
+function UsuarioAutenticacion(){
+  var nombre = document.getElementById("user").value;
+  var contraseña = document.getElementById("pwd").value;
+if ( nombre=="Andrea" && contraseña=="1234"){
   guardarDatos()
-window.location.href = "mainpage.html";// Redirige a la pagina principal.
+window.location.href = "index.html";// Redirige a la pagina principal.
 
 }
 
 else{
-   
+  
 return alert("Algunos de los campos igresados no es correcto o hay campos vacios, por favor verifique");
+ {
+ 
+ 
+ 
+}
 }
 }
 
 function mostrarNombreUsuario() {
   if ((localStorage.nombre != undefined) && (localStorage.contraseña != undefined)) {
-       document.getElementById("user").innerHTML = localStorage.nombre ;
-   } 
+      document.getElementById("user").innerHTML = localStorage.nombre ;
+  } 
 }
 
 function BorrarDatos(){
-   localStorage.removeItem ('nombre');
-   localStorage.removeItem ('contraseña');
+  localStorage.removeItem ('nombre');
+  localStorage.removeItem ('contraseña');
 
 }
 
