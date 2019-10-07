@@ -11,7 +11,7 @@ function UsuarioAutenticacion(){
   var contraseña = document.getElementById("pwd").value;
 if ( nombre=="Andrea" && contraseña=="1234"){
   guardarDatos()
-window.location.href = "index.html";// Redirige a la pagina principal.
+window.location.href = "mainpage.html";// Redirige a la pagina principal.
 
 }
 
