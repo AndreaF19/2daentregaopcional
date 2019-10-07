@@ -50,10 +50,7 @@ function BorrarDatos(){
     console.log("ID Token: " + id_token);
     window.location.href="mainpage.html";// Redirige a la pagina principal.
   }
-   function getAuthInstance(){
-   }
-   
-  
+
    function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
